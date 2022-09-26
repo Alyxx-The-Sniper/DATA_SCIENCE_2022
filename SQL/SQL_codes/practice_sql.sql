@@ -1,5 +1,5 @@
 
--- 1. Quert pop_total in each zip code (return zip_code, state_code, city, pop_total)
+-- 1. Query pop_total in each zip code (return zip_code, state_code, city, pop_total)
 -- 
 -- census_table has no city while HS_table has, so I will JOIN these tables to extract necessary COLUMN from both tables
 -- I will use zip_code as their joining COLUMN ID.
