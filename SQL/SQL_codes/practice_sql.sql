@@ -1,6 +1,7 @@
 
 -- 1. Query pop_total in each zip code (return zip_code, state_code, city, pop_total)
 -- 
+-- Note: census_table pop_total are counted by zip_code
 -- census_table has no city while HS_table has, so I will JOIN these tables to extract necessary COLUMN from both tables
 -- I will use zip_code as their joining COLUMN ID.
 -- I use left join to retain zip_code from census_table even though there is none in HS_table
@@ -51,6 +52,7 @@ LIMIT 10
 SELECT *,
 sum(pop_total) over (ORDER by state_code)
 as 'running_pop_total'
-
+-- 
 FROM temp_table
+-- GROUP by state_code
 ;
